@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SCRIPT -->
+  <script defer src="js/cargadatos.js"></script>
+  <script src="js/jsonSesiones.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Open Graph-->
+
+  <meta property="og:locale" content="Es_es">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="La Mosca">
+  <meta property="og:description" content="Primer ciclo de Storytelling en Argentina">
+  <meta property="og:url" content="https://www.lamoscastorytelling.com.ar">
+  <meta property="og:image" content="/Imagenes/banner/delivery.png">
+
+  <!--SEO-->
+  <meta name="title" content="La Mosca - Storytelling">
+  <meta name="description" content="Conocé nuestra agenda y reservá tu lugar en las próximas sesiones">
+  <meta name="keywords" content="Mosca, Storytelling, Argentina, Historias, Reservas, Agenda, Cultura">
+  <meta name="author" content="Nicolás Perednik">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" , type="text/css" , href="CSS/style.css">
+
+
+  <!--Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--GoogleFonts Titulos-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- G.F texto-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+
+  <title>La Mosca - Storytelling</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed" id="inicio">
+      <nav>
+        <div class="nav-wrapper grey">
+          <a href="#!" class="brand-logo">La Mosca Storytelling</a>
+          <a href="" data-target="menu-responsive" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li class="inicio" onclick="muevePantalla(`inicio`)"><a>Inicio</a></li>
+            <li class="conocenos" onclick="muevePantalla(`conocenos`)"><a>Conocenos</a></li>
+            <li class="proximas" onclick="muevePantalla(`proximas`)"><a>Próximas Sesiones</a></li>
+            <li class="participa"><a class="modal-trigger" href="#donaciones">Colabora</a></li>
+            <li class="creaSesion" id="validaAdmin"><a>Creá una sesión</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="menu-responsive">
+        <li class="inicio" onclick="muevePantalla(`inicio`)"><a>Inicio</a></li>
+        <li class="conocenos" onclick="muevePantalla(`conocenos`)"><a>Conocenos</a></li>
+        <li class="proximas" onclick="muevePantalla(`proximas`)"><a>Próximas Sesiones</a></li>
+        <li class="participa"><a class="modal-trigger" href="#donaciones">Colabora</a></li>
+        <li class="creaSesion" id="vali11daAdmin"><a href="#detalleSesiones">Creá una sesión</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+
+  <main>
+
+
+    <!-- Modal Donaciones -->
+    <div id="donaciones" class="modal">
+      <div class="modal-content modalDonaciones">
+        <h5 class="center">Colaborá con La Mosca</h5>
+        <p>Si querés colaborar con el ciclo podés hacerlo aportando a nuestra gorra virtual mediante transferencia bancaria
+          <br><br>
+
+          Los datos de nuestra cuenta son:
+          <br>
+          Alias: LAMOSCASTORYTELLING<br>
+
+          Titular: Franco Ernesto
+
+          <br><br>
+          Con tu aporte ayudás a mantener vivo el ciclo y nos permitís seguir mejorando sesión a sesión. <br>
+          Si no podés colaborar económicamente podés ayudarnos difundiendo nuestra próxima sesión en redes
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      </div>
+    </div>
+
+    <!-- Logo bienvenida -->
+    <div class="container cabeceraInicial">
+      <img src="img/laMosca.png" alt="Logotipo de La Mosca Storytelling" class="logoMosca">
+    </div>
+
+    <br>
+    <!--Parallax Separador de contenido-->
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/banner.jpg"></div>
+    </div>
+    <!-- -------------------INFORMACION-------------------- -->
+    <!-- SOBRE NOSOTROS-->
+    <div class="container section divCollapsible" id="conocenos">
+      <!--Collapsible con presentación-->
+
+      <div class="container">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header collPregunta"><i class="material-icons">filter_drama</i>¿Qué es el
+              Storytelling?</div>
+            <div class="collapsible-body collNosotros"><span>
+                <span class="detalleNosotros">
+                  Storytelling es el arte de contar una historia. <br>
+                  La creación y aprovechamiento de una atmósfera mágica a través del relato. <br>
+                  Esta capacidad de contar historias, así como el arte que va asociado a ésta, es de las más antiguas
+                  que existen:
+                  conectar emocionalmente a través de una historia, dejar que te lleguen y toquen el corazón y la
+                  cabeza, el
+                  cuerpo y el espíritu: lo racional y lo instintivo. <br>
+                </span>
+              </span></div>
+          </li>
+          <li>
+            <div class="collapsible-header collPregunta"><i class="material-icons">place</i>¿Por qué 'La Mosca'?</div>
+            <div class="collapsible-body collNosotros"><span>
+                <p class="bajada">"Cómo quisiera ser mosca, para saber de qué estaban hablando..."</p>
+                <span class="detalleNosotros">Bajo esta premisa, cada noche de "La Mosca", nuestros narradores
+                  compartirán sus
+                  historias con la audiencia. Cada uno involucrara al publico en su mundo y en sus pensamientos, para
+                  que sepan
+                  que les sucedía y como se sentían, para que puedan conocer algo mas de ellos y, con algo de suerte,
+                  para que
+                  puedan conocer algo mas de si mismos.</span>
+              </span></div>
+          </li>
+          <li>
+            <div class="collapsible-header collPregunta"><i class="material-icons">whatshot</i>¿Qué es el Matamoscas?
+            </div>
+            <div class="collapsible-body collNosotros"><span>
+                <p class="bajada"> Nuestro formato competitivo</p>
+                <span class="detalleNosotros">
+                  En las noches de Matamoscas a la clásica emoción de cada sesión se le suma el factor competencia. <br>
+
+                  En esta primera edición la temática central serán los cuatro elementos, así es que cada sesión tratará
+                  uno de ellos: Agua; Aire; Tierra y Viento.
+                  <br>
+
+                  ¿Estás listo para ser vos quien mate las moscas con su voto?
+
+
+                </span>
+              </span></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!--Parallax Separador de contenido-->
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/banner.jpg"></div>
+    </div>
+  <!-- -----------------RESERVAS---------------------- -->
+    <!-- AGENDA SESIONES-->
+    <div class="container agendaSesiones" name="proximasSesiones" id="sesionesPlanificadas">
+      <div class="row">
+        <p class="col s12" id="tituloAgenda">PROXIMAS SESIONES</p>
+
+        <!-- Carrito que se transforma en botones Reserva/Limpia -->
+        <p class="sesionCarrito col s12 center"> Actualmente no tiene pre-reservas realizadas </p>
+      </div>
+
+      <div class="container divAgenda">
+        <table class="table highlight proxSesiones">
+          <thead class="center">
+            <tr class="center">
+              <th scope="col">Fecha</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Temática</th>
+              <th scope="col">Modalidad</th>
+              <th scope="col">Narradores</th>
+              <th scope="col">Presentador</th>
+              <th scope="col">Reservá</th>
+            </tr>
+          </thead>
+          <tbody id="detalleSesiones">
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+      <div class="divFiltro" id="filtroAgenda">
+        <div class="row">
+          <button class="btn-large botonPropio"> Ver Matamoscas</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!--Carrito reservas en pantalla - oculto al iniciar-->
+    <div class="container confirmaReserva">
+      <h2 class="center">VAS A RESERVAR</h2>
+      <table class="table highlight proxSesiones">
+        <thead class="center">
+          <tr class="center-align">
+            <th scope="col">Fecha</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Temática</th>
+            <th scope="col">Eliminá</th>
+          </tr>
+        </thead>
+        <tbody id="detalleSesionesCarrito">
+
+        </tbody>
+      </table>
+      <div class="container">
+
+
+        <div class="row">
+          <span class="col s9">Ingresá tu mail para confirmar la reserva:</span>
+          <input type="mail" id="mailReserva" class="col s3">
+
+        </div>
+        <div class="center botonesCarrito">
+          <button class=" btn botonPropio blue" onclick="enviarReserva()"> Enviar reserva</button>
+          <button class=" btn botonPropio orange" onclick="muestroAgenda()"> Volver a Agenda </button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!--Parallax Separador de contenido-->
+    <div class="parallax-container" id="parallaxSesionNueva">
+      <div class="parallax"><img src="img/banner.jpg"></div>
+    </div>
+
+      <!-- -----------------ADMINISTRACION---------------------- -->
+    <!--Form para crear nueva sesion. Oculto al iniciar. Pass: 1234-->
+    <div class="section container" id="nuevaSesion">
+      <h2 class="center-align">Completá los datos de la nueva sesión</h2>
+      <div class="row">
+        <form class="col s12 creaSesion" id="formularioNuevaSesion">
+          <div class="row card-panel">
+
+            <div class="input-field col s6">
+              <input type="text" id="nombreNuevaSesion" name="nombre">
+              <label for="nombreNuevaSesion">Nombre</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="text" id="fechaNuevaSesion" name="fecha" class="datepicker" format="dd-mm">
+              <label for="fechaNuevaSesion">Fecha</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="text" id="tematicaNuevaSesion" name="tematica">
+              <label for="tematicaNuevaSesion">Temática</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input type="text" id="presentadorNuevaSesion" name="presentador">
+              <label for="presentadorNuevaSesion">Presentador</label>
+            </div>
+
+            <div class="input-field col s9">
+              <input type="text" id="narradoresNuevaSesion" name="narradores">
+              <label for="narradoresNuevaSesion">Narradores</label>
+            </div>
+
+            <div class="input-field col s3">
+              <select id="modalidadNuevaSesion" name="modalidad">
+                <option value="opcion" disabled selected>Modalidad</option>
+                <option value="true">Matamoscas</option>
+                <option value="false">Tradicional</option>
+              </select>
+              <label>Modalidad</label>
+            </div>
+
+            <div class="col s12 center-align">
+              <button class="btn botonPropio agregaSesion" id="agregaSesion"> Agregar</button>
+              <button class="btn botonPropio limpiaForm red" type="reset">Limpiar</button>
+              <button class="btn botonPropio red right cerrarForm" type="reset"><i
+                  class="material-icons">close</i></button>
+
+            </div>
+          </div>
+      </div>
+      </form>
+    </div>
+
+
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="page-footer grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <a href="https://www.instagram.com/lamoscastorytelling/" class="linkRedes">
+            <h5 class="black-text center-align">Seguí a La Mosca en sus redes</h5>
+          </a>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="black-text">Navegá</h5>
+          <ul>
+            <li class="inicio" onclick="muevePantalla(`inicio`)"><a class="linkFooter">Inicio</a></li>
+            <li class="conocenos" onclick="muevePantalla(`conocenos`)"><a class="linkFooter">Conocenos</a></li>
+            <li class="proximas" onclick="muevePantalla(`proximas`)"><a class="linkFooter">Próximas Sesiones</a></li>
+            <li class="participa"><a class="modal-trigger linkFooter" href="#donaciones">Colabora</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center black-text">© 2021 Desarrollo por <a class="black-text bajada"
+          href="https://github.com/perednikn">NICOPE</a></div>
+    </div>
+
+
+
+  </footer>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://kit.fontawesome.com/72e75abc71.js" crossorigin="anonymous"></script>
+  <script>
+    M.AutoInit();
+    const Calendar = document.querySelector(".datepicker");
+    M.Datepicker.init(Calendar, { format: 'dd-mm' });
+  </script>
+
+
+
+</body>
+
+</html>

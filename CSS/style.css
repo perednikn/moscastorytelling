@@ -1,0 +1,212 @@
+
+body{
+   background-image: url("fondopapel.jpg");
+   
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.divCollapsible{
+  display: flex;
+  align-items: center;
+  height: 900px;
+  border-style: double;
+  border: 2px, rgb(140, 175, 185);
+
+}
+.bajada{
+    font-family: 'Rock Salt', cursive;
+    font-size: 15px;
+    text-align: right;
+    color: black;
+}
+
+
+.detalleNosotros{
+  text-align: justify;
+  font-family: 'Short Stack', cursive;
+  font-size: 20px;
+  color: black;
+}
+
+
+
+
+    /* LINKS DEL NAVBAR */
+  .gridBotones{
+    display: inline-grid;
+    grid-template-columns: repeat (6, 2fr);
+    grid-template-areas: "Reserva Modalidad Nosotros Sesiones Participa creaUnaSesion";
+    max-height: 100%;
+    align-self: center;
+  }
+
+  .reserva{
+    grid-area: Reserva;
+    }
+
+    .reserva:hover {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+  .modalidad{
+    grid-area: Modalidad;
+  }
+
+    .modalidad:hover{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+  .nosotros{
+    grid-area: Nosotros;
+  }
+  .nosotros:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  .sesiones{
+    grid-area: Sesiones;
+  }
+  .sesiones:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  .participa{
+    grid-area: Participa;
+  }
+ 
+  .creaSesion{
+    grid-area: creaUnaSesion;
+    font-size: 20px;
+    
+  }
+
+  /* HASTA ACÁ LINKS DEL NAVBAR */
+
+  #formularioNuevaSesion{
+    font-family: 'Short Stack', cursive;
+    font-size: 20px;
+  }
+  #formularioNuevaSesion input{
+    font-family: 'Short Stack', cursive;
+  
+  }
+  .proxSesiones{
+    font-size: 15px;
+    height: 100%;
+    margin-bottom: 50px;
+    border-style: inset;
+    border: 2px, rgb(140, 175, 185);
+    background-color: white;
+    text-align: center;
+    
+  }
+
+  .divFiltro{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .center{
+    text-align: center;
+  }
+  .botonPropio{
+    
+    justify-content: center;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .sesionCarrito{
+    font-size: 16px;
+    max-height: 5px;
+  }
+
+  .botonesCarrito{
+    margin-bottom: 20px;
+  }
+
+
+.confirmaReserva{
+  font-size: 18px;
+  display: none;
+ 
+  height: 100%;
+  margin-bottom: 50px;
+  margin: 100px, 10px, 10, 10;
+  border-style:groove;
+  border: 12px, rgb(140, 175, 185);
+  background-color: white;
+  text-align: center;
+  
+}
+
+#nuevaSesion{
+  display: none;
+  background-color:  rgba(230, 228, 229);
+}
+
+
+
+#sesionesPlanificadas{
+  background-color:  rgba(230, 228, 229);
+  width: 100%;
+  margin-bottom: 110px;
+
+}
+
+.confirmaReserva{
+  background-color:  rgba(230, 228, 229);
+}
+
+#tituloAgenda{
+ font-size: 30px;
+ text-align: center;
+ padding-top:30px;
+}
+
+.btnNavBar{
+  background: none;
+}
+
+
+.collNosotros{
+  background-color:rgba(230, 228, 229);
+ }
+
+ .collPregunta{
+   font-size: 20px;
+ }
+
+
+ .agendaSesiones{
+  border-style: double;
+  border: 2px, rgb(140, 175, 185);
+  width: 100%;
+  height: auto !important;
+ }
+
+
+ .modalDonaciones{
+   font-size: 15px;
+ }
+
+ .cabeceraInicial{
+   padding-top: 61px;
+   padding-bottom: 61px;
+ }
+
+ .logoMosca{
+   padding-top: 20px;
+ }
+
+.linkFooter{
+  color: black;
+}
+
+.linkRedes{
+  width:  1100px;
+  height: 100px;
+  color: black;
+}
